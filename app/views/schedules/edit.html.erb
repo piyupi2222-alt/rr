@@ -1,0 +1,40 @@
+<h1>
+  予定の編集
+  </h1>
+
+
+ <div class="schedule-form">
+  <%= form_with model: @task,url: schedule_path(@task), local: true do |f| %>
+
+  <div class="field">
+  <div class="label-group">
+  <%= f.label :title ,"タイトル" %><span class="required">※</span></div>
+  <%= f.text_field :title , placeholder: "20文字以内" %>
+ </div>
+ <div class ="field-date">
+  <div class="label-group">
+  <%= f.label :start_date ,"開始日" %><span class="required">※</span></div>
+  <%= f.date_field :start_date %>
+   <div class="label-group">
+   <%= f.label :end_date ,"終了日" %><span class="required">※</span></div>
+   <%= f.date_field :end_date %>
+</div>
+   <div class="field-check">
+   <%= f.label :all_day ,"終日" %>
+   <%= f.check_box :all_day %>
+    </div>
+
+  <div class="field">
+   <%= f.label :content, "スケジュールメモ" %>
+   <%= f.text_area :content, rows: 5, placeholder: "予定の詳細を入力してください" %>
+   </div>
+ 
+
+   <div class="form-actions">
+       <ul class="new-form-button">
+        <li><%= link_to '詳細にもどる', schedule_path(@task) ,class:'back-button'%></li>
+        <li><%= f.submit "更新する",class: "btn-submit" %></li>
+        </ul>
+    </div>
+<% end %>
+</di
