@@ -2,7 +2,9 @@ class SchedulesController < ApplicationController
 def home
  @tasks = Task.all
 end
-
+def index
+ @tasks=Task.all
+end
 
 # 詳細
 def show
