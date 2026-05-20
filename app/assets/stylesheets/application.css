@@ -13,3 +13,183 @@
  *= require_tree .
  *= require_self
  */
+body {
+          font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+          color: #333;
+          background-color: #f8f9fa;
+          padding: 20px;
+        }
+
+ h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #A9C6CF;
+  padding-bottom: 10px;
+}
+
+h2.PageTitle__text {
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.container{
+  display:flex;
+  align-items: center;  
+  gap: 30px;
+}
+.date {
+ background-color: #A9C6CF; /* 背景色 */
+  color: #ffffff;            
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;     /* 横幅をコンテンツに合わせる */
+  margin-bottom: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.count{
+  color: #34495e;           
+  padding: 10px 15px;
+  display: inline-block;     /* 横幅をコンテンツに合わせる */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.add-button {
+  background-color: #B0C4DE;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;     /* 横幅をコンテンツに合わせる */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.new-link-container {
+  margin-bottom: 20px;
+}
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.table thead {
+  background-color: #f1f3f5;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  padding: 12px;
+}
+
+
+
+/*新規追加画面*/
+.schedule-form {
+  width: 80%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding-left: 50px; 
+}
+.field label {
+  display: block;      /* これで横並びを解除できます */
+  margin-bottom: 5px;  /* ラベルと入力欄の間の隙間 */
+}
+
+.label-group{
+  display: flex;
+}
+.required{
+  color: red;
+  font-size: 12px;
+}
+
+.field input[type="text"],
+.field input[type="date"],
+.field textarea {
+  display: block;
+  width: 50%;         /* 幅をいっぱいにする */
+  box-sizing: border-box;
+  margin-bottom: 10px; 
+
+}
+
+.form-actions ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.btn-submit{
+  background-color: #B0C4DE;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;     
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 16px
+}
+.back-button{
+  background-color: #D4E1E8;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;     /* 横幅をコンテンツに合わせる */
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+/*編集画面*/
+.edit-table {
+  border: solid 1px #63768D;
+  border-collapse: collapse; /* 隣り合う枠線を1本にする */
+  color: #63768D;
+  width: 80%; /* 横幅を広げると見やすくなります */
+}
+.edit-table th, .edit-table td {
+  border: solid 1px #63768D;
+  padding: 10px; /* 余白を入れるときれいになります */
+}
+.th-label {
+  background-color: #D4E1E8;
+  width: 30%; /* 見出しの幅を固定すると揃って見えます */
+  text-align: left; /* 文字を左寄せにする場合 */
+}
+
+/*メッセージ*/
+.flash {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.flash.notice {
+  background-color: #B0BCA8; /* 指定の緑 */
+  color: white;
+}
+
+.flash.alert, .flash.error {
+  background-color: #F8D7DA; /* 薄いピンク（背景） */
+  color: #A74E4A;           /* 指定いただいた赤（文字色として使用） */
+  border: 1px solid #A74E4A;
