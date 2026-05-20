@@ -1,0 +1,37 @@
+<h1>
+  予定の詳細
+  </h1>
+
+<table class="edit-table">
+  <tr>
+    <th class="th-label">タイトル</th>
+    <td><%= @task.title %></td>
+  </tr>
+
+  <tr>
+    <th class="th-label">スケジュールメモ</th>
+    <td><%= @task.content %></td>
+  </tr>
+
+  <tr>
+    <th class="th-label">開始日</th>
+    <td><%= @task.start_date .strftime("%Y/%m/%d")%></td>
+  </tr>
+
+  <tr>
+    <th class="th-label">終了日</th>
+    <td><%= @task.end_date .strftime("%Y/%m/%d")%></td>
+  </tr>
+
+  <tr>
+    <th class="th-label">終日</th>
+    <td><%= @task.all_day ? "○" : "" %></td>
+  </tr>
+</table>
+   <div class="form-actions">
+       <ul class="new-form-button">
+        <li><%= link_to 'ホームにもどる', root_path ,class:'back-button'%></li>
+        <li><%= link_to "編集する",edit_schedule_path(@task), class: "btn-submit" %></li>
+        </ul>
+    </div>
+</div>
